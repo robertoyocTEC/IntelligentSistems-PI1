@@ -13108,12 +13108,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">initial_board</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span>
-<span class="p">]</span>
-<span class="n">target_board</span> <span class="o">=</span> <span class="p">[</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">target_board</span> <span class="o">=</span> <span class="p">[</span>
     <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
     <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
     <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span>
@@ -13165,41 +13160,6 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_board</span><span class="p">(</span><span class="n">initial_board</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 | 2 | 3
----------
-0 | 4 | 5
----------
-7 | 8 | 6
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_board</span><span class="p">(</span><span class="n">target_board</span><span class="p">)</span>
 </pre></div>
 
@@ -13232,7 +13192,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert_list_to_string</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
@@ -13274,7 +13234,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bfs_get_minimum</span><span class="p">(</span><span class="n">initial</span><span class="p">,</span> <span class="n">next_nodes</span><span class="p">):</span>
@@ -13350,10 +13310,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">operations_performed</span><span class="p">,</span> <span class="n">steps</span> <span class="o">=</span> <span class="n">bfs</span><span class="p">(</span><span class="n">initial_board</span><span class="p">,</span> <span class="n">target_board</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">initial_board_1</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span>
+<span class="p">]</span>
+<span class="n">operations_performed</span><span class="p">,</span> <span class="n">steps</span> <span class="o">=</span> <span class="n">bfs</span><span class="p">(</span><span class="n">initial_board_1</span><span class="p">,</span> <span class="n">target_board</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13405,7 +13370,7 @@ New board
 
 --------------------
 next_nodes = [&#39;023145786&#39;, &#39;123405786&#39;, &#39;123745086&#39;]
-visited_nodes = {&#39;123745086&#39;, &#39;123405786&#39;, &#39;023145786&#39;, &#39;123045786&#39;}
+visited_nodes = {&#39;123045786&#39;, &#39;123745086&#39;, &#39;023145786&#39;, &#39;123405786&#39;}
 
 Initial board
 1 | 2 | 3
@@ -13444,7 +13409,7 @@ New board
 
 --------------------
 next_nodes = [&#39;023145786&#39;, &#39;123745086&#39;, &#39;103425786&#39;, &#39;123450786&#39;, &#39;123485706&#39;]
-visited_nodes = {&#39;103425786&#39;, &#39;123405786&#39;, &#39;023145786&#39;, &#39;123745086&#39;, &#39;123450786&#39;, &#39;123045786&#39;, &#39;123485706&#39;}
+visited_nodes = {&#39;123045786&#39;, &#39;103425786&#39;, &#39;123450786&#39;, &#39;123485706&#39;, &#39;023145786&#39;, &#39;123745086&#39;, &#39;123405786&#39;}
 
 Initial board
 1 | 2 | 3
@@ -13476,7 +13441,7 @@ New board
 
 --------------------
 next_nodes = [&#39;023145786&#39;, &#39;123745086&#39;, &#39;103425786&#39;, &#39;123485706&#39;, &#39;120453786&#39;, &#39;123456780&#39;]
-visited_nodes = {&#39;103425786&#39;, &#39;123405786&#39;, &#39;023145786&#39;, &#39;123456780&#39;, &#39;123745086&#39;, &#39;123450786&#39;, &#39;120453786&#39;, &#39;123045786&#39;, &#39;123485706&#39;}
+visited_nodes = {&#39;123045786&#39;, &#39;103425786&#39;, &#39;123450786&#39;, &#39;123485706&#39;, &#39;023145786&#39;, &#39;120453786&#39;, &#39;123745086&#39;, &#39;123456780&#39;, &#39;123405786&#39;}
 
 * Target reached!
 </pre>
@@ -13489,61 +13454,14 @@ visited_nodes = {&#39;103425786&#39;, &#39;123405786&#39;, &#39;023145786&#39;, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;initial board&#39;</span><span class="p">)</span>
-<span class="n">print_board</span><span class="p">(</span><span class="n">initial_board</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">target board&#39;</span><span class="p">)</span>
-<span class="n">print_board</span><span class="p">(</span><span class="n">target_board</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>initial board
-1 | 2 | 3
----------
-0 | 4 | 5
----------
-7 | 8 | 6
-
-
-target board
-1 | 2 | 3
----------
-4 | 5 | 6
----------
-7 | 8 | 0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Operations performed = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operations_performed</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of steps = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total steps = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
 
-<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Paso #</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step #</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
     <span class="n">print_board</span><span class="p">(</span><span class="n">steps</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -13563,9 +13481,17 @@ target board
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Operations performed = 12
-Number of steps = 3
+Total steps = 3
 
-Paso #1
+Step #0
+1 | 2 | 3
+---------
+0 | 4 | 5
+---------
+7 | 8 | 6
+
+
+Step #1
 1 | 2 | 3
 ---------
 4 | 0 | 5
@@ -13573,7 +13499,7 @@ Paso #1
 7 | 8 | 6
 
 
-Paso #2
+Step #2
 1 | 2 | 3
 ---------
 4 | 5 | 0
@@ -13581,7 +13507,7 @@ Paso #2
 7 | 8 | 6
 
 
-Paso #3
+Step #3
 1 | 2 | 3
 ---------
 4 | 5 | 6
@@ -13614,7 +13540,7 @@ Paso #3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">initial_board_2</span> <span class="o">=</span> <span class="p">[</span>
@@ -13622,19 +13548,7 @@ Paso #3
     <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
     <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span>
 <span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">operations_performed</span><span class="p">,</span> <span class="n">steps</span> <span class="o">=</span> <span class="n">bfs</span><span class="p">(</span><span class="n">initial_board_2</span><span class="p">,</span> <span class="n">target_board</span><span class="p">)</span>
+<span class="n">operations_performed</span><span class="p">,</span> <span class="n">steps</span> <span class="o">=</span> <span class="n">bfs</span><span class="p">(</span><span class="n">initial_board_2</span><span class="p">,</span> <span class="n">target_board</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13679,7 +13593,7 @@ New board
 
 --------------------
 next_nodes = [&#39;102453786&#39;, &#39;123450786&#39;]
-visited_nodes = {&#39;120453786&#39;, &#39;123450786&#39;, &#39;102453786&#39;}
+visited_nodes = {&#39;102453786&#39;, &#39;123450786&#39;, &#39;120453786&#39;}
 
 Initial board
 1 | 2 | 3
@@ -13711,7 +13625,7 @@ New board
 
 --------------------
 next_nodes = [&#39;102453786&#39;, &#39;123405786&#39;, &#39;123456780&#39;]
-visited_nodes = {&#39;102453786&#39;, &#39;123405786&#39;, &#39;123456780&#39;, &#39;123450786&#39;, &#39;120453786&#39;}
+visited_nodes = {&#39;102453786&#39;, &#39;123450786&#39;, &#39;120453786&#39;, &#39;123456780&#39;, &#39;123405786&#39;}
 
 * Target reached!
 </pre>
@@ -13724,61 +13638,14 @@ visited_nodes = {&#39;102453786&#39;, &#39;123405786&#39;, &#39;123456780&#39;, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;initial board 2&#39;</span><span class="p">)</span>
-<span class="n">print_board</span><span class="p">(</span><span class="n">initial_board_2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">target board&#39;</span><span class="p">)</span>
-<span class="n">print_board</span><span class="p">(</span><span class="n">target_board</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>initial board 2
-1 | 2 | 0
----------
-4 | 5 | 3
----------
-7 | 8 | 6
-
-
-target board
-1 | 2 | 3
----------
-4 | 5 | 6
----------
-7 | 8 | 0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Operations performed = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operations_performed</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of steps = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total steps = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
 
-<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Paso #</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step #</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
     <span class="n">print_board</span><span class="p">(</span><span class="n">steps</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -13798,9 +13665,17 @@ target board
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Operations performed = 7
-Number of steps = 2
+Total steps = 2
 
-Paso #1
+Step #0
+1 | 2 | 0
+---------
+4 | 5 | 3
+---------
+7 | 8 | 6
+
+
+Step #1
 1 | 2 | 3
 ---------
 4 | 5 | 0
@@ -13808,7 +13683,7 @@ Paso #1
 7 | 8 | 6
 
 
-Paso #2
+Step #2
 1 | 2 | 3
 ---------
 4 | 5 | 6
@@ -13833,7 +13708,7 @@ Paso #2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">initial_board_3</span> <span class="o">=</span> <span class="p">[</span>
@@ -13841,19 +13716,7 @@ Paso #2
     <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
     <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span>
 <span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">operations_performed</span><span class="p">,</span> <span class="n">steps</span> <span class="o">=</span> <span class="n">bfs</span><span class="p">(</span><span class="n">initial_board_3</span><span class="p">,</span> <span class="n">target_board</span><span class="p">)</span>
+<span class="n">operations_performed</span><span class="p">,</span> <span class="n">steps</span> <span class="o">=</span> <span class="n">bfs</span><span class="p">(</span><span class="n">initial_board_3</span><span class="p">,</span> <span class="n">target_board</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13898,7 +13761,7 @@ New board
 
 --------------------
 next_nodes = [&#39;102453786&#39;, &#39;412053786&#39;]
-visited_nodes = {&#39;412053786&#39;, &#39;012453786&#39;, &#39;102453786&#39;}
+visited_nodes = {&#39;102453786&#39;, &#39;012453786&#39;, &#39;412053786&#39;}
 
 Initial board
 1 | 0 | 2
@@ -13930,7 +13793,7 @@ New board
 
 --------------------
 next_nodes = [&#39;412053786&#39;, &#39;120453786&#39;, &#39;152403786&#39;]
-visited_nodes = {&#39;412053786&#39;, &#39;012453786&#39;, &#39;102453786&#39;, &#39;152403786&#39;, &#39;120453786&#39;}
+visited_nodes = {&#39;102453786&#39;, &#39;152403786&#39;, &#39;012453786&#39;, &#39;120453786&#39;, &#39;412053786&#39;}
 
 Initial board
 1 | 2 | 0
@@ -13955,7 +13818,7 @@ New board
 
 --------------------
 next_nodes = [&#39;412053786&#39;, &#39;152403786&#39;, &#39;123450786&#39;]
-visited_nodes = {&#39;412053786&#39;, &#39;012453786&#39;, &#39;102453786&#39;, &#39;152403786&#39;, &#39;123450786&#39;, &#39;120453786&#39;}
+visited_nodes = {&#39;102453786&#39;, &#39;123450786&#39;, &#39;152403786&#39;, &#39;012453786&#39;, &#39;120453786&#39;, &#39;412053786&#39;}
 
 Initial board
 1 | 2 | 3
@@ -13987,7 +13850,7 @@ New board
 
 --------------------
 next_nodes = [&#39;412053786&#39;, &#39;152403786&#39;, &#39;123405786&#39;, &#39;123456780&#39;]
-visited_nodes = {&#39;412053786&#39;, &#39;012453786&#39;, &#39;102453786&#39;, &#39;123405786&#39;, &#39;123456780&#39;, &#39;152403786&#39;, &#39;123450786&#39;, &#39;120453786&#39;}
+visited_nodes = {&#39;102453786&#39;, &#39;123450786&#39;, &#39;152403786&#39;, &#39;012453786&#39;, &#39;120453786&#39;, &#39;412053786&#39;, &#39;123456780&#39;, &#39;123405786&#39;}
 
 * Target reached!
 </pre>
@@ -14000,61 +13863,14 @@ visited_nodes = {&#39;412053786&#39;, &#39;012453786&#39;, &#39;102453786&#39;, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;initial board 2&#39;</span><span class="p">)</span>
-<span class="n">print_board</span><span class="p">(</span><span class="n">initial_board_3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">target board&#39;</span><span class="p">)</span>
-<span class="n">print_board</span><span class="p">(</span><span class="n">target_board</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>initial board 2
-0 | 1 | 2
----------
-4 | 5 | 3
----------
-7 | 8 | 6
-
-
-target board
-1 | 2 | 3
----------
-4 | 5 | 6
----------
-7 | 8 | 0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Operations performed = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operations_performed</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of steps = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total steps = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Paso #</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step #</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
     <span class="n">print_board</span><span class="p">(</span><span class="n">steps</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -14074,9 +13890,9 @@ target board
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Operations performed = 12
-Number of steps = 4
+Total steps = 4
 
-Paso #1
+Step #1
 1 | 0 | 2
 ---------
 4 | 5 | 3
@@ -14084,7 +13900,7 @@ Paso #1
 7 | 8 | 6
 
 
-Paso #2
+Step #2
 1 | 2 | 0
 ---------
 4 | 5 | 3
@@ -14092,7 +13908,7 @@ Paso #2
 7 | 8 | 6
 
 
-Paso #3
+Step #3
 1 | 2 | 3
 ---------
 4 | 5 | 0
@@ -14100,7 +13916,7 @@ Paso #3
 7 | 8 | 6
 
 
-Paso #4
+Step #4
 1 | 2 | 3
 ---------
 4 | 5 | 6
